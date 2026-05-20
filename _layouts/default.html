@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>{{ page.title | default: site.title }}</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+SC:wght@700&family=Space+Mono&display=swap" rel="stylesheet" />
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    html, body {
+      height: 100%;
+    }
+
+    body {
+      background-color: #F5F0E5;
+      color: #0D0D0B;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 100vh;
+    }
+
+    main {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 2rem;
+      padding: 3rem 2rem;
+      text-align: center;
+    }
+
+    /* Logo */
+    .logo-wrap {
+      width: 140px;
+    }
+
+    /* Divider */
+    hr {
+      border: none;
+      width: 40px;
+      height: 1px;
+      background: #0D0D0B;
+      opacity: 0.2;
+    }
+
+    /* Under construction label */
+    .label {
+      font-family: 'Space Mono', monospace;
+      font-size: 0.6rem;
+      letter-spacing: 0.35em;
+      text-transform: uppercase;
+      color: #7A7870;
+    }
+
+    /* GitHub link */
+    .gh-link {
+      font-family: 'Space Mono', monospace;
+      font-size: 0.6rem;
+      letter-spacing: 0.2em;
+      color: #7A7870;
+      text-decoration: none;
+      border-bottom: 1px solid transparent;
+      transition: border-color 0.2s, color 0.2s;
+    }
+    .gh-link:hover {
+      color: #0D0D0B;
+      border-bottom-color: #0D0D0B;
+    }
+
+    /* Copy */
+    .copy {
+      font-family: 'Cormorant SC', Georgia, serif;
+      font-size: 1rem;
+      font-weight: 400;
+      line-height: 1.8;
+      color: #0D0D0B;
+      opacity: 0.55;
+      letter-spacing: 0.05em;
+    }
+  </style>
+</head>
+<body>
+  <main>
+    {{ content }}
+  </main>
+</body>
+</html>
