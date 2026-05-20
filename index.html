@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>{{ page.title | default: site.title }}</title>
+  <title>Wabo Labs — Coming Soon</title>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+SC:wght@700&family=Space+Mono&display=swap" rel="stylesheet" />
@@ -32,12 +32,10 @@
       text-align: center;
     }
 
-    /* Logo */
     .logo-wrap {
       width: 140px;
     }
 
-    /* Divider */
     hr {
       border: none;
       width: 40px;
@@ -46,7 +44,6 @@
       opacity: 0.2;
     }
 
-    /* Under construction label */
     .label {
       font-family: 'Space Mono', monospace;
       font-size: 0.6rem;
@@ -55,7 +52,15 @@
       color: #7A7870;
     }
 
-    /* GitHub link */
+    .copy {
+      font-family: 'Cormorant SC', Georgia, serif;
+      font-size: 1rem;
+      line-height: 1.8;
+      color: #0D0D0B;
+      opacity: 0.55;
+      letter-spacing: 0.05em;
+    }
+
     .gh-link {
       font-family: 'Space Mono', monospace;
       font-size: 0.6rem;
@@ -65,26 +70,25 @@
       border-bottom: 1px solid transparent;
       transition: border-color 0.2s, color 0.2s;
     }
+
     .gh-link:hover {
       color: #0D0D0B;
       border-bottom-color: #0D0D0B;
-    }
-
-    /* Copy */
-    .copy {
-      font-family: 'Cormorant SC', Georgia, serif;
-      font-size: 1rem;
-      font-weight: 400;
-      line-height: 1.8;
-      color: #0D0D0B;
-      opacity: 0.55;
-      letter-spacing: 0.05em;
     }
   </style>
 </head>
 <body>
   <main>
-    {{ content }}
+
+    <object class="logo-wrap" type="image/svg+xml" data="logo.svg" aria-label="Wabo Labs"></object>
+
+    <hr />
+
+    <p class="label">Under Construction</p>
+    <p class="copy">Something new is on its way.<br>Check back soon.</p>
+
+    <a class="gh-link" href="https://github.com/wabolabs/">github.com/wabolabs</a>
+
   </main>
 </body>
 </html>
